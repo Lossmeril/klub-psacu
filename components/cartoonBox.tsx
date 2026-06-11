@@ -1,15 +1,12 @@
 interface CartoonBoxProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const CartoonBox: React.FC<CartoonBoxProps> = ({ children }) => {
+const CartoonBox: React.FC<CartoonBoxProps> = ({ children, className }) => {
   return (
     <div
-      style={{
-        borderRadius: "255px 15px 225px 15px/15px 225px 15px 255px !important",
-        border: "3px solid rgba(0,0,0)",
-      }}
-      className="p-16 bg-white overflow-hidden flex flex-col justify-center gap-4"
+      className={`p-8 lg:p-12 bg-white overflow-hidden flex flex-col justify-start gap-4 comic-box ${className}`}
     >
       {children}
     </div>

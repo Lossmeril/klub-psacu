@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  /* Fonts */
+  --font-heading: var(--font-montserrat);
+  --font-decorative: var(--font-mynerve);
+
+  /* Brand colors */
   --color-pink: #e56e8b;
   --color-pink-50: #fdf3f5;
   --color-pink-100: #fbe8eb;
@@ -18,7 +23,18 @@
   --color-light: #ffffff;
 }
 
+body {
+  font-family: var(--font-poppins), sans-serif;
+}
+
 strong {
   font-weight: bold;
   color: #e56e8b;
+}
+
+.comic-box {
+  border-image: url(../public/img/frame.png) 60;
+  /* background: transparent; */
+  border-width: 12px;
+  border-style: solid;
 }

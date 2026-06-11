@@ -1,29 +1,26 @@
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  columns?: number;
+  innerClassName?: string;
   ariaLabel?: string;
 }
 
 const Section: React.FC<SectionProps> = ({
   children,
-  columns,
-  ariaLabel,
   className,
+  innerClassName,
+  ariaLabel,
 }) => {
   return (
     <section
-      className={`w-full min-h-screen  place-content-center text-center ${className}`}
+      className={`w-full py-20 lg:py-28 ${className ?? ""}`}
       aria-label={ariaLabel}
     >
-      <div
-        className={`max-w-[80%] mx-auto ${
-          columns ? `grid grid-cols-${columns}` : ""
-        }`}
-      >
+      <div className={`max-w-6xl mx-auto px-6 ${innerClassName ?? ""}`}>
         {children}
       </div>
     </section>
   );
 };
+
 export default Section;
